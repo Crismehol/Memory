@@ -7,18 +7,11 @@ package memory;
 
 import java.util.Random;
 
-/**
- *
- * @author 1DAW11
- */
 public class MemoryWin extends javax.swing.JFrame {
-    
-    
-   
-    
     
     public MemoryWin() {
         initComponents();
+       
     }
 
     @SuppressWarnings("unchecked")
@@ -35,11 +28,6 @@ public class MemoryWin extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jSecuencia.setEditable(false);
-        jSecuencia.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jSecuenciaActionPerformed(evt);
-            }
-        });
 
         buttonComprobar.setText("Comprobar");
         buttonComprobar.addActionListener(new java.awt.event.ActionListener() {
@@ -49,18 +37,6 @@ public class MemoryWin extends javax.swing.JFrame {
         });
 
         labelPosicion.setText("Posición:");
-
-        jPos1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPos1ActionPerformed(evt);
-            }
-        });
-
-        jPos2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPos2ActionPerformed(evt);
-            }
-        });
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel1.setText("Memory");
@@ -106,27 +82,18 @@ public class MemoryWin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonComprobarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonComprobarActionPerformed
-        
         Random random = new Random();
-        int secuencia = 8;
-        for (int i = 0; i < secuencia; i++){
-            
-        }
+        int secuencia1 = random.nextInt(8)+1;
+        jSecuencia.setText(String.valueOf(secuencia1));
+//        
+//        do{
+//            
+//        }while();
         
+        
+//        System.out.println(secuencia);
     }//GEN-LAST:event_buttonComprobarActionPerformed
-
-    private void jSecuenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSecuenciaActionPerformed
         
-    }//GEN-LAST:event_jSecuenciaActionPerformed
-        
-    private void jPos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPos1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPos1ActionPerformed
-
-    private void jPos2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPos2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPos2ActionPerformed
-
     /**
      * @param args the command line arguments
      */
