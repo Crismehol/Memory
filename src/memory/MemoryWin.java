@@ -9,9 +9,10 @@ import java.util.Random;
 
 public class MemoryWin extends javax.swing.JFrame {
     
+    String secuencia = "";
+    
     public MemoryWin() {
-        initComponents();
-       
+        initComponents(); 
     }
 
     @SuppressWarnings("unchecked")
@@ -83,15 +84,15 @@ public class MemoryWin extends javax.swing.JFrame {
 
     private void buttonComprobarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonComprobarActionPerformed
         Random random = new Random();
-        int secuencia1 = random.nextInt(8)+1;
-        jSecuencia.setText(String.valueOf(secuencia1));
-//        
-//        do{
-//            
-//        }while();
         
-        
-//        System.out.println(secuencia);
+        for(int i=0; i<= 9 ;i++){
+            int sec_1 = random.nextInt(9);
+            String secTotal = String.valueOf(sec_1);
+            secuencia += secTotal;
+        }
+        jSecuencia.setText(secuencia );
+
+        System.out.println(secuencia);
     }//GEN-LAST:event_buttonComprobarActionPerformed
         
     /**
