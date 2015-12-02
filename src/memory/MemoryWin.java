@@ -8,14 +8,12 @@ package memory;
 import java.util.Random;
 
 public class MemoryWin extends javax.swing.JFrame {
-    
-    String secuencia = "";
+  
+    Random random = new Random();
     
     public MemoryWin() {
-        initComponents(); 
-    }
-
-    @SuppressWarnings("unchecked")
+        initComponents();            
+    }       
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -47,21 +45,23 @@ public class MemoryWin extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(labelPosicion)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPos1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPos2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(buttonComprobar))
-                    .addComponent(jSecuencia)
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jSecuencia, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(labelPosicion)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jPos1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jPos2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(buttonComprobar))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(67, 67, 67)
+                        .addGap(82, 82, 82)
                         .addComponent(jLabel1)))
-                .addGap(0, 24, Short.MAX_VALUE))
+                .addGap(0, 20, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -83,18 +83,18 @@ public class MemoryWin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonComprobarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonComprobarActionPerformed
-        Random random = new Random();
+        String secuencia = "";
         
         for(int i=0; i<= 9 ;i++){
             int sec_1 = random.nextInt(9);
             String secTotal = String.valueOf(sec_1);
-            secuencia += secTotal;
+            secuencia += secTotal;          
         }
-        jSecuencia.setText(secuencia );
-
+        
+        jSecuencia.setText(secuencia);
+        
         System.out.println(secuencia);
     }//GEN-LAST:event_buttonComprobarActionPerformed
-        
     /**
      * @param args the command line arguments
      */
@@ -129,7 +129,6 @@ public class MemoryWin extends javax.swing.JFrame {
             }
         });
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton buttonComprobar;
     private javax.swing.JLabel jLabel1;
